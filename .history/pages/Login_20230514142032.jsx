@@ -38,13 +38,19 @@ export default function Login({navigation}) {
             <View
               style={{padding:30}}
             >
-                <Text style={{color:'#4632A1', fontSize:34}}>Welcome</Text>
-                <Text style={{fontWeight:'700'}}>
+                <Text style={{color:'grey',alignItems:'center',justifyContent:'center', alignSelf:'center', fontSize:30, fontWeight:'600'}}>Rgc Flix</Text>
+                <Text style={{fontWeight:'800', alignSelf:'center'}}>
                   Don't have an account?
-                  <Text style={{fontWeight:'600',color:'darkblue', fontStyle:'italic'}}>
-                    {' '}
-                    Register now
-                  </Text>
+                  
+                    <TouchableOpacity
+                      style={{marginTop:10}}
+                    >
+                      <Text style={{fontWeight:'600',color:'darkorange', fontStyle:'italic'}}>
+                        {' '}
+                        Register now
+                      </Text>
+                    </TouchableOpacity>
+                  
                 </Text> 
                 {/***Form Inputs */}
                 <View style={{marginTop: 40}}>
@@ -92,7 +98,7 @@ export default function Login({navigation}) {
                         alignItems:'center',
                         justifyContent:'center',
                         marginTop:15,
-                        backgroundColor:'#036ea8',
+                        backgroundColor:'lightorange',
                         padding:18, 
                         color:'white',
                       }}

@@ -39,13 +39,13 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Account' screenOptions={{
+      <Stack.Navigator initialRouteName='Login' screenOptions={{
         headerShown:false,
         cardStyle:{
           backgroundColor:'white'
         }
         }}>
-        <Stack.Screen name='Account' component={Account} />
+        <Stack.Screen name='Login' component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );
