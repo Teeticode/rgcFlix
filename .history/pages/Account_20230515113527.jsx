@@ -71,12 +71,10 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
-                        marginLeft:Dimensions.get('window').width/6,
-                        backgroundColor:'#0077b5',
+                        marginTop:15,
+                        backgroundColor:'black',
                         padding:18, 
                         color:'white',
-                        width:Dimensions.get('window').width/2
                       }}
                     >
                       <Text style={{color:'white', fontSize:15, fontWeight:'900'}}>Login</Text>
@@ -175,16 +173,15 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                             alignSelf:'center'
                           }}
                         >
-                        <Ionicons name='share-outline' style={{alignSelf:'center'}} size={27} color='white'/>
+                        <Ionicons name='share-outline' size={27} color='white'/>
                         </TouchableOpacity>
                       </View>
                     </View>
-                    
                     <TouchableOpacity
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
+                        marginTop:15,
                         marginLeft:Dimensions.get('window').width/6,
                         backgroundColor:'#0077b5',
                         padding:18, 

@@ -57,9 +57,9 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                         >
                           {
                             isSecure?(
-                              <Ionicons name='eye-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
+                              <Ionicons name='eye-outline' size={25} color='grey' style={{fontWeight:'900'}}/>
                             ):(
-                              <Ionicons name='eye-off-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
+                              <Ionicons name='eye-off-outline' size={25} color='grey' style={{fontWeight:'900'}}/>
                             )
                           }
                         
@@ -71,7 +71,7 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
+                        marginTop:15,
                         marginLeft:Dimensions.get('window').width/6,
                         backgroundColor:'#0077b5',
                         padding:18, 
@@ -184,7 +184,7 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
+                        marginTop:15,
                         marginLeft:Dimensions.get('window').width/6,
                         backgroundColor:'#0077b5',
                         padding:18, 

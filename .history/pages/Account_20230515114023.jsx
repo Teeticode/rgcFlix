@@ -184,7 +184,7 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
+                        marginTop:15,
                         marginLeft:Dimensions.get('window').width/6,
                         backgroundColor:'#0077b5',
                         padding:18, 

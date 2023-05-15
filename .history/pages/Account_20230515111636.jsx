@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 import { Keyboard } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
+function Login({username}){
   return(
     <View style={{marginTop: 40}}>
                   <View>
@@ -23,8 +23,8 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                     >
                       <TextInput 
                         editable
-                        onChangeText={text=>setEmail(text)}
-                        value={email}
+                        onChangeText={text=>setUserName(text)}
+                        value={username}
                         style={{padding:10, fontSize:17, fontWeight:'900'}}
                         placeholder='johndoe@gmail.com'
                       />
@@ -44,26 +44,15 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                         <View>
                         <TextInput 
                         editable
-                        onChangeText={text=>setPsd(text)}
-                        value={password}
+                        onChangeText={text=>setUserName(text)}
+                        value={username}
                         style={{padding:10, fontSize:17, fontWeight:'900'}}
                         placeholder='password'
-                        secureTextEntry={isSecure}
+                        secureTextEntry={true}
                       />
                         </View>
                       <View>
-                        <TouchableOpacity
-                          onPress={()=>{setSecure(!isSecure)}}
-                        >
-                          {
-                            isSecure?(
-                              <Ionicons name='eye-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
-                            ):(
-                              <Ionicons name='eye-off-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
-                            )
-                          }
-                        
-                        </TouchableOpacity>
+                        <Ionicons name='eye-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
                       </View>
                       
                     </View>
@@ -71,12 +60,10 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
-                        marginLeft:Dimensions.get('window').width/6,
-                        backgroundColor:'#0077b5',
+                        marginTop:15,
+                        backgroundColor:'black',
                         padding:18, 
                         color:'white',
-                        width:Dimensions.get('window').width/2
                       }}
                     >
                       <Text style={{color:'white', fontSize:15, fontWeight:'900'}}>Login</Text>
@@ -85,7 +72,7 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                 </View>
   )
 }
-function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
+function Register({username}){
   return(
     <View style={{marginTop: 40}}>
                   <View>
@@ -100,8 +87,8 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                     >
                       <TextInput 
                         editable
-                        onChangeText={text=>setEmail(text)}
-                        value={email}
+                        onChangeText={text=>setUserName(text)}
+                        value={username}
                         style={{padding:10, fontSize:17, fontWeight:'900'}}
                         placeholder='johndoe@gmail.com'
                       />
@@ -121,26 +108,15 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                         <View>
                         <TextInput 
                         editable
-                        onChangeText={text=>setPsd(text)}
-                        value={password}
+                        onChangeText={text=>setUserName(text)}
+                        value={username}
                         style={{padding:10, fontSize:17, fontWeight:'900'}}
                         placeholder='password'
-                        secureTextEntry={isSecure}
+                        secureTextEntry={true}
                       />
                         </View>
                       <View>
-                      <TouchableOpacity
-                          onPress={()=>{setSecure(!isSecure)}}
-                        >
-                          {
-                            isSecure?(
-                              <Ionicons name='eye-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
-                            ):(
-                              <Ionicons name='eye-off-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
-                            )
-                          }
-                        
-                        </TouchableOpacity>
+                        <Text>show</Text>
                       </View>
                       
                     </View>
@@ -162,34 +138,18 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                         }}
                       />
                       </View>
-                      <View
-                        style={{
-                          marginLeft:15
-                        }}
-                      >
-                        <TouchableOpacity
-                          style={{
-                            backgroundColor:'#0077b5',
-                            borderRadius:10,
-                            padding:10,
-                            alignSelf:'center'
-                          }}
-                        >
-                        <Ionicons name='share-outline' style={{alignSelf:'center'}} size={27} color='white'/>
-                        </TouchableOpacity>
+                      <View>
+                        <Ionicons name='cloud-upload-outline' size={20} color='black'/>
                       </View>
                     </View>
-                    
                     <TouchableOpacity
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
-                        marginLeft:Dimensions.get('window').width/6,
-                        backgroundColor:'#0077b5',
+                        marginTop:15,
+                        backgroundColor:'black',
                         padding:18, 
                         color:'white',
-                        width:Dimensions.get('window').width/2
                       }}
                     >
                       <Text style={{color:'white', fontSize:15, fontWeight:'900'}}>Register</Text>
@@ -199,11 +159,9 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
   )
 }
 export default function Account({navigation}) {
-  const [email, setEmail] = useState('');
-  const [password, setPsd] = useState('');
+  const [username, setUserName] = useState('');
   const [keyboardStatus, setKeyboardStatus] = useState('');
   const [isLogin, setIsLogin] = useState(false)
-  const [isSecure, setSecure] = useState(true)
   
   return (
    
@@ -262,12 +220,12 @@ export default function Account({navigation}) {
                       >
                         {
                           isLogin?(
-                            <Text style={{fontSize:15,fontWeight:'600',color:'#0077b5', fontStyle:'italic'}}>
+                            <Text style={{fontWeight:'600',color:'darkorange', fontStyle:'italic'}}>
                         {' '}
                         Register Now
                       </Text>
                           ):(
-                            <Text style={{fontSize:15,fontWeight:'600',color:'#0077b5', fontStyle:'italic'}}>
+                            <Text style={{fontWeight:'600',color:'darkorange', fontStyle:'italic'}}>
                         {' '}
                         Login Now
                       </Text>
@@ -287,21 +245,9 @@ export default function Account({navigation}) {
                 {/***Form Inputs */}
                 {
                   isLogin?(
-                    <Login 
-                      email={email} 
-                      setEmail={setEmail}
-                      password={password}
-                      setPsd={setPsd}
-                      isSecure={isSecure} 
-                      setSecure={setSecure}/>
+                    <Login username={username}/>
                   ):(
-                    <Register 
-                      email={email} 
-                      setEmail={setEmail}
-                      password={password}
-                      setPsd={setPsd} 
-                      isSecure={isSecure} 
-                      setSecure={setSecure}/>
+                    <Register username={username}/>
                   ) 
                 }
             </View>

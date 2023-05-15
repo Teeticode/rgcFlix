@@ -71,12 +71,10 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
-                        marginLeft:Dimensions.get('window').width/6,
-                        backgroundColor:'#0077b5',
+                        marginTop:15,
+                        backgroundColor:'black',
                         padding:18, 
                         color:'white',
-                        width:Dimensions.get('window').width/2
                       }}
                     >
                       <Text style={{color:'white', fontSize:15, fontWeight:'900'}}>Login</Text>
@@ -125,22 +123,11 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                         value={password}
                         style={{padding:10, fontSize:17, fontWeight:'900'}}
                         placeholder='password'
-                        secureTextEntry={isSecure}
+                        secureTextEntry={true}
                       />
                         </View>
                       <View>
-                      <TouchableOpacity
-                          onPress={()=>{setSecure(!isSecure)}}
-                        >
-                          {
-                            isSecure?(
-                              <Ionicons name='eye-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
-                            ):(
-                              <Ionicons name='eye-off-outline' size={30} color='grey' style={{fontWeight:'900'}}/>
-                            )
-                          }
-                        
-                        </TouchableOpacity>
+                        <Text>show</Text>
                       </View>
                       
                     </View>
@@ -162,34 +149,18 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                         }}
                       />
                       </View>
-                      <View
-                        style={{
-                          marginLeft:15
-                        }}
-                      >
-                        <TouchableOpacity
-                          style={{
-                            backgroundColor:'#0077b5',
-                            borderRadius:10,
-                            padding:10,
-                            alignSelf:'center'
-                          }}
-                        >
-                        <Ionicons name='share-outline' style={{alignSelf:'center'}} size={27} color='white'/>
-                        </TouchableOpacity>
+                      <View>
+                        <Ionicons name='cloud-upload-outline' size={20} color='black'/>
                       </View>
                     </View>
-                    
                     <TouchableOpacity
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
-                        marginLeft:Dimensions.get('window').width/6,
-                        backgroundColor:'#0077b5',
+                        marginTop:15,
+                        backgroundColor:'black',
                         padding:18, 
                         color:'white',
-                        width:Dimensions.get('window').width/2
                       }}
                     >
                       <Text style={{color:'white', fontSize:15, fontWeight:'900'}}>Register</Text>
@@ -262,12 +233,12 @@ export default function Account({navigation}) {
                       >
                         {
                           isLogin?(
-                            <Text style={{fontSize:15,fontWeight:'600',color:'#0077b5', fontStyle:'italic'}}>
+                            <Text style={{fontWeight:'600',color:'darkorange', fontStyle:'italic'}}>
                         {' '}
                         Register Now
                       </Text>
                           ):(
-                            <Text style={{fontSize:15,fontWeight:'600',color:'#0077b5', fontStyle:'italic'}}>
+                            <Text style={{fontWeight:'600',color:'darkorange', fontStyle:'italic'}}>
                         {' '}
                         Login Now
                       </Text>

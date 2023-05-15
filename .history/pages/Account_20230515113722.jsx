@@ -71,7 +71,7 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
+                        marginTop:15,
                         marginLeft:Dimensions.get('window').width/6,
                         backgroundColor:'#0077b5',
                         padding:18, 
@@ -79,7 +79,7 @@ function Login({email,setEmail, password, setPsd, isSecure, setSecure}){
                         width:Dimensions.get('window').width/2
                       }}
                     >
-                      <Text style={{color:'white', fontSize:15, fontWeight:'900'}}>Login</Text>
+                      <Text style={{color:'white', fontSize:15, fontWeight:'900'}}>Register</Text>
                     </TouchableOpacity>
                   </View>
                 </View>
@@ -184,7 +184,7 @@ function Register({email,setEmail, password, setPsd, isSecure, setSecure}){
                       style={{
                         alignItems:'center',
                         justifyContent:'center',
-                        marginTop:35,
+                        marginTop:15,
                         marginLeft:Dimensions.get('window').width/6,
                         backgroundColor:'#0077b5',
                         padding:18, 
