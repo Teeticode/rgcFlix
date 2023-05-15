@@ -6,7 +6,6 @@ import camera from '../assets/images/camera.jpg'
 import { TextInput } from 'react-native-gesture-handler'
 import { useEffect } from 'react'
 import { Keyboard } from 'react-native'
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function Login({username}){
   return(
@@ -122,12 +121,12 @@ function Register({username}){
                         style={{
                           width:90,
                           height:90,
-                          borderRadius:45
+                          borderRadius:40
                         }}
                       />
                       </View>
                       <View>
-                        <Ionicons name='cloud-upload-outline' size={20} color='black'/>
+                      
                       </View>
                     </View>
                     <TouchableOpacity
